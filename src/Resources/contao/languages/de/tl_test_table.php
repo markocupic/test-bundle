@@ -13,7 +13,8 @@
 /**
  * Legends
  */
-$GLOBALS['TL_LANG']['tl_test_table']['bundle_settings'] = "Bundle Einstellungen";
+$GLOBALS['TL_LANG']['tl_test_table']['first_legend'] = "Basis Einstellungen";
+$GLOBALS['TL_LANG']['tl_test_table']['first_legend'] = "Erweiterte Einstellungen";
 
 /**
  * Operations
@@ -29,6 +30,7 @@ $GLOBALS['TL_LANG']['tl_test_table']['title'] = ["Name", "Geben Sie einen Namen 
 $GLOBALS['TL_LANG']['tl_test_table']['selectField'] = ["Select Feld", "Wählen Sie aus."];
 $GLOBALS['TL_LANG']['tl_test_table']['checkboxField'] = ["Chosen Feld", "Wählen Sie aus."];
 $GLOBALS['TL_LANG']['tl_test_table']['multitextField'] = ["Multitext Feld", "Geben Sie die Werte ein"];
+$GLOBALS['TL_LANG']['tl_test_table']['addSubpalette'] = ["Erweiterte Einstellungen aktivieren", "Hier können Sie die erweiterten Einstellungen aktivieren."];
 $GLOBALS['TL_LANG']['tl_test_table']['textareaField'] = ["Textarea", "Geben Sie einen Text ein"];
 
 /**

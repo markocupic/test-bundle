@@ -1,13 +1,13 @@
 {
   "name": "markocupic/test-bundle",
-  "description": "Hier kommt die Beschreibung",
+  "description": "Hier kommt die Beschreibung für das Testbundle",
   "keywords": [
     "contao",
     "bundle",
     "tag 1",
     "tag 2"
   ],
-  "type": "contao-module",
+  "type": "contao-bundle",
   "licence": "MIT",
   "authors": [
     {

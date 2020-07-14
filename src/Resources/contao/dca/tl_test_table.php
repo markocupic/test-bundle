@@ -16,7 +16,7 @@
 $GLOBALS['TL_DCA']['tl_test_table'] = [
 
     // Config
-    'config'   => [
+    'config'      => [
         'dataContainer'    => 'Table',
         'enableVersioning' => true,
         'sql'              => [
@@ -25,12 +25,12 @@ $GLOBALS['TL_DCA']['tl_test_table'] = [
             ]
         ],
     ],
-    'edit'     => [
+    'edit'        => [
         'buttons_callback' => [
             ['tl_test_table', 'buttonsCallback']
         ]
     ],
-    'list'     => [
+    'list'        => [
         'sorting'           => [
             'mode'        => 2,
             'fields'      => ['title'],
@@ -38,7 +38,7 @@ $GLOBALS['TL_DCA']['tl_test_table'] = [
             'panelLayout' => 'filter;sort,search,limit'
         ],
         'label'             => [
-            'fields' => ['bundlename'],
+            'fields' => ['title'],
             'format' => '%s',
         ],
         'global_operations' => [
@@ -70,11 +70,16 @@ $GLOBALS['TL_DCA']['tl_test_table'] = [
         ]
     ],
     // Palettes
-    'palettes' => [
-        'default' => '{bundle_legend},title,selectField,checkboxField,multitextField,textareaField'
+    'palettes'    => [
+        '__selector__' => ['addSubpalette'],
+        'default'      => '{first_legend},title,selectField,checkboxField,multitextField;{second_legend},addSubpalette'
+    ],
+    // Subpalettes
+    'subpalettes' => [
+        'addSubpalette' => 'textareaField',
     ],
     // Fields
-    'fields'   => [
+    'fields'      => [
         'id'             => [
             'sql' => "int(10) unsigned NOT NULL auto_increment"
         ],
@@ -128,6 +133,12 @@ $GLOBALS['TL_DCA']['tl_test_table'] = [
             'eval'      => ['multiple' => true, 'size' => 4, 'decodeEntities' => true, 'tl_class' => 'w50'],
             'sql'       => "varchar(255) NOT NULL default ''"
         ],
+        'addSubpalette'  => [
+            'exclude'   => true,
+            'inputType' => 'checkbox',
+            'eval'      => ['submitOnChange' => true, 'tl_class' => 'w50 clr'],
+            'sql'       => "char(1) NOT NULL default ''"
+        ],
         'textareaField'  => [
             'inputType' => 'textarea',
             'exclude'   => true,
@@ -155,7 +166,7 @@ class tl_test_table extends Contao\Backend
     {
         if (Contao\Input::get('act') === 'edit')
         {
-            $arrButtons['customButton'] = '<button type="submit" name="customButton" id="customButton" class="tl_submit customButton" accesskey="x">' . $GLOBALS['TL_LANG']['tl_test_table']['customButtonButton'] . '</button>';
+            $arrButtons['customButton'] = '<button type="submit" name="customButton" id="customButton" class="tl_submit customButton" accesskey="x">' . $GLOBALS['TL_LANG']['tl_test_table']['customButton'] . '</button>';
         }
 
         return $arrButtons;
