@@ -1,12 +1,13 @@
 {
   "name": "markocupic/test-bundle",
-  "description": "Hier kommt die Beschreibung für das Testbundle",
+  "description": "Hier kommt die Beschreibung für das Hello World Bundle",
   "keywords": [
     "contao",
     "bundle",
     "tag 1",
     "tag 2"
   ],
+  "version": "1.0",
   "type": "contao-bundle",
   "licence": "MIT",
   "authors": [
