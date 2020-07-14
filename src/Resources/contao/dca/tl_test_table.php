@@ -102,7 +102,8 @@ $GLOBALS['TL_DCA']['tl_test_table'] = [
             //'foreignKey'            => 'tl_user.name',
             //'options_callback'      => ['CLASS', 'METHOD'],
             'eval'      => ['includeBlankOption' => true, 'tl_class' => 'w50'],
-            'sql'       => "varchar(255) NOT NULL default ''"
+            'sql'       => "varchar(255) NOT NULL default ''",
+            //'relation'  => ['type' => 'hasOne', 'load' => 'lazy']
         ],
         'checkboxField'  => [
             'inputType' => 'select',
@@ -116,7 +117,7 @@ $GLOBALS['TL_DCA']['tl_test_table'] = [
             //'options_callback'      =>['CLASS', 'METHOD'],
             'eval'      => ['includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'],
             'sql'       => "varchar(255) NOT NULL default ''",
-            'relation'  => ['type' => 'hasOne', 'load' => 'lazy']
+            //'relation'  => ['type' => 'hasOne', 'load' => 'lazy']
         ],
         'multitextField' => [
             'inputType' => 'text',
