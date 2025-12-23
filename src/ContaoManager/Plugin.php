@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * This file is part of Test Bundle.
  *
- * (c) Marko Cupic &lt;m.cupic@gmx.ch&gt;
+ * (c) Marko Cupic <m.cupic@gmx.ch>
  * @license GPL-3.0-or-later
  * For the full copyright and license information,
  * please view the LICENSE file that was distributed with this source code.
@@ -14,12 +14,12 @@ declare(strict_types=1);
 
 namespace Markocupic\TestBundle\ContaoManager;
 
+use Markocupic\TestBundle\MarkocupicTestBundle;
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use Contao\ManagerPlugin\Routing\RoutingPluginInterface;
-use Markocupic\TestBundle\MarkocupicTestBundle;
 use Symfony\Component\Config\Loader\LoaderResolverInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Routing\RouteCollection;
