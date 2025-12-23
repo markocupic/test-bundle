@@ -2,5 +2,13 @@
     "require": {
         "phpunit/phpunit": "^9.4",
         "contao/test-case": "^5.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-community-alliance/composer-plugin": true,
+            "contao-components/installer": false,
+            "contao/manager-plugin": false,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
