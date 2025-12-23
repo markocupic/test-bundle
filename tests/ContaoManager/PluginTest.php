@@ -17,11 +17,11 @@ namespace Markocupic\TestBundle\Tests\ContaoManager;
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\DelegatingParser;
+use Contao\TestCase\ContaoTestCase;
 use Markocupic\TestBundle\ContaoManager\Plugin;
 use Markocupic\TestBundle\MarkocupicTestBundle;
-use PHPUnit\Framework\TestCase;
 
-class PluginTest extends TestCase
+class PluginTest extends ContaoTestCase
 {
     /**
      * Test Contao manager plugin class instantiation.
