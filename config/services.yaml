@@ -1,0 +1,30 @@
+# config/services.yaml
+services:
+    _defaults:
+        autowire: true          # Automatically injects dependencies in your services.
+        autoconfigure: true     # Automatically registers your services as commands, event subscribers, etc.
+        public: false           # Allows optimizing the container by removing unused services; this also means
+                                # fetching services directly from the container via $container->get() won't work.
+                                # The best practice is to be explicit about your dependencies anyway.
+        bind:
+            #$projectDir: '%kernel.project_dir%'
+
+    Markocupic\TestBundle\:
+        resource: ../src/
+        exclude: ../src/{DependencyInjection,Model,Session}
+
+      # Add a session bag
+    markocupic.test_bundle.session.factory:
+        class: Markocupic\TestBundle\Session\SessionFactory
+        decorates: session.factory
+        arguments:
+            - '@markocupic.test_bundle.session.factory.inner'
+            - '@markocupic.test_bundle.session.attribute.array_attribute_bag'
+
+    markocupic.test_bundle.session.attribute.array_attribute_bag:
+        class: Markocupic\TestBundle\Session\Attribute\ArrayAttributeBag
+        arguments:
+            - _markocupic_test_attributes
+        calls:
+            - [ setName, [ markocupic_test ] ]
+  

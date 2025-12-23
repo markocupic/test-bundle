@@ -12,14 +12,11 @@ declare(strict_types=1);
  * @link https://github.com/markocupic/test-bundle
  */
 
-namespace Markocupic\TestBundle;
+namespace Markocupic\TestBundle\Model;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Contao\Model;
 
-class MarkocupicTestBundle extends Bundle
+class PetsModel extends Model
 {
-    public function getPath(): string
-    {
-        return \dirname(__DIR__);
-    }
+    protected static $strTable = 'tl_pets';
 }
