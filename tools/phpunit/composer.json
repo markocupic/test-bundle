@@ -1,7 +1,7 @@
 {
     "require": {
-        "phpunit/phpunit": "^9.4",
-        "contao/test-case": "^5.3"
+        "phpunit/phpunit": "^9.5",
+        "contao/test-case": "^5.0"
     },
     "config": {
         "allow-plugins": {
